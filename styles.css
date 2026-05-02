@@ -102,3 +102,17 @@ footer a {
     gap: 30px;
     justify-content: flex-start;
 }
+.resultados-container {
+    background-color: hsla(180, 23%, 37%, 0.685);
+    padding: 50px;
+    margin: 20px auto;
+    width: 100%;
+    max-width: 1200px;
+    border-radius: 10px;
+}
+.resultados-container h2 {
+    display: flex;
+    justify-content: center;
+    color: hsl(300, 16%, 96%);
+    top: 10px;
+}
