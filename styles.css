@@ -34,6 +34,9 @@ body{
         top: 15px;
         left: 10px;
     }
+    .header-tittle:hover {
+        color: rgba(164, 170, 173, 0.571);
+    }
     .nav-botones {
         display: inline-flex;
         gap: 15px;
