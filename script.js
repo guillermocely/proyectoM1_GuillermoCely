@@ -112,7 +112,7 @@ function mostrarColores() {
     setTimeout(() =>{
         feedback.textContent = "";
         feedback.style.display = 'none';
-    }, 2000); 
+    }, 3000); 
 }
 
 // ========================
