@@ -1,0 +1,57 @@
+/* Media queries para responsive design */
+
+/* Tablet */
+@media (max-width: 768px) {
+    .header-container {
+        padding: 20px;
+    }
+    
+    .header-tittle {
+        font-size: 1.5rem;
+    }
+    
+    .color-container {
+        padding: 20px;
+    }
+    
+    .resultados-container {
+        padding: 30px;
+    }
+    
+    .resultados-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
+
+/* Móvil */
+@media (max-width: 480px) {
+    .header-container {
+        padding: 15px;
+    }
+    
+    .header-tittle {
+        font-size: 1.2rem;
+    }
+    
+    .header-tittle img {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .color-container {
+        padding: 15px;
+    }
+    
+    .btn-generar {
+        padding: 12px 30px;
+        font-size: 0.9rem;
+    }
+    
+    .resultados-container {
+        padding: 20px;
+    }
+    
+    .resultados-grid {
+        grid-template-columns: 1fr;
+    }
+}

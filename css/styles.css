@@ -1,0 +1,15 @@
+/* Base styles */
+@import 'base/reset.css';
+@import 'base/typography.css';
+
+/* Layout styles */
+@import 'layout/body.css';
+@import 'layout/header.css';
+@import 'layout/footer.css';
+
+/* Component styles */
+@import 'components/containers.css';
+@import 'components/colores.css';
+
+/* Responsive styles */
+@import 'responsive/media-queries.css';

@@ -1,0 +1,4 @@
+/* Tipografía - fuentes y estilos de texto */
+h1, h2, p, label {
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}

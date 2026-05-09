@@ -1,0 +1,96 @@
+.color-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 30px 10px;
+    background-color: hsla(180, 86%, 48%, 0.685);
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.color-container label {
+    color: hsl(0, 0%, 4%);
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+#selectorTamaño:hover {
+     color: rgba(245, 243, 243, 0.883);
+     background-color: blue;
+}
+.button-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    margin-top: 0;
+    position: relative;
+}
+
+.feedback {
+    display: none;
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+    min-height: 20px;
+    z-index: 10;
+}
+
+.btn-generar{
+    justify-content: center;
+    background-color: rgba(65, 105, 225, 0.781);
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 15px 40px;
+    margin-top: 0;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-generar:hover{
+    background-color: rgba(241, 23, 197, 0.699);
+    transform: scale(1.05);
+}
+
+.resultados-container {
+    background-color: hsla(180, 82%, 44%, 0.685);
+    padding: 50px;
+    margin: 20px auto;
+    width: 100%;
+    max-width: 1200px;
+    border-radius: 10px;
+}
+
+.resultados-container h2 {
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    color: hsl(300, 16%, 96%);
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+.resultados-container h2:hover {
+    color:hsl(259, 100%, 50%);
+}
+
+.resultados-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
