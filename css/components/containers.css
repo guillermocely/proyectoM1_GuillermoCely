@@ -15,11 +15,21 @@
     color: hsl(0, 0%, 4%);
     font-size: 1.1rem;
     font-weight: bold;
+    
 }
-
+#selectorFormato{
+    cursor: pointer;
+}
+#selectorFormato:hover {
+     color: rgba(245, 243, 243, 0.883);
+     background-color: blue;
+}
 #selectorTamaño:hover {
      color: rgba(245, 243, 243, 0.883);
      background-color: blue;
+}
+#selectorTamaño{
+    cursor: pointer;
 }
 .button-container {
     display: flex;
@@ -82,6 +92,7 @@
     color: hsl(300, 16%, 96%);
     margin-top: 0;
     margin-bottom: 30px;
+     user-select: none; 
 }
 
 .resultados-container h2:hover {
@@ -93,4 +104,7 @@
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
     padding: 20px;
+}
+.resultado-card button {
+    cursor: pointer;
 }

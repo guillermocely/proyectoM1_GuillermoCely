@@ -22,9 +22,9 @@ Aplicación web para generar paletas de colores aleatorias en formato HEX y HSL.
 - Selección de tamaño de paleta (6, 8 o 9 colores)
 - Copia al portapapeles con un clic
 - Feedback visual con fantasma animado
-- Diseño responsivo
+
 
 ## Tecnologías
 - HTML5 semántico
 - JavaScript vanilla
-- CSS modular y responsivo
+- CSS 

@@ -120,7 +120,12 @@ function mostrarColores() {
 // ========================
 function copiarColor(color) {
     navigator.clipboard.writeText(color).then(() => {
-        alert('Copiado: ' + color);
+        feedback.textContent = "Color copiado";
+        feedback.style.display = 'block';
+        setTimeout(() =>{
+            feedback.textContent = "";
+            feedback.style.display = 'none';
+        }, 3000); 
     });
 }
 
