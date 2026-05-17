@@ -133,3 +133,27 @@ function copiarColor(color) {
 // EVENTO: CUANDO HACE CLIC EN EL BOTÓN
 // ========================
 botonGenerar.addEventListener('click', mostrarColores);
+// ========================
+// EVENTO: CUANDO CAMBIA EL FORMATO
+// ========================
+selectorFormato.addEventListener('change', function() {
+    const formatoSeleccionado = selectorFormato.value.toUpperCase();
+    feedback.textContent = `Cambio a formato ${formatoSeleccionado}`;
+    feedback.style.display = 'block';
+    setTimeout(() => {
+        feedback.textContent = "";
+        feedback.style.display = 'none';
+    }, 3000);
+});
+// ========================
+// EVENTO: CUANDO CAMBIA EL TAMAÑO
+// ========================
+selectorTamaño.addEventListener('change', function() {
+    const tamañoSeleccionado = selectorTamaño.value;
+    feedback.textContent = `Cambio a tamaño ${tamañoSeleccionado}`;
+    feedback.style.display = 'block';
+    setTimeout(() => {
+        feedback.textContent = "";
+        feedback.style.display = 'none';
+    }, 3000);
+});
