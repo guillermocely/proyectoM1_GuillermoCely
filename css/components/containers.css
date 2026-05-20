@@ -32,30 +32,29 @@
 #selectorTamaño{
     cursor: pointer;
 }
-.button-container {
+.button-ghost-container {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 20px 0;
-    margin-top: 45px;
-    position: relative;
+    gap: 30px;
+    padding: 30px 0;
+    margin: 20px auto;
+    width: 100%;
+    max-width: 1200px;
 }
 
 .feedback {
     display: none;
     position: absolute;
-    bottom: -40px;
-    left: 28%;
-    transform: translateX(-50%);
     padding: 10px 20px;
-    background-color: #4CAF50;
+    background-color: #0e000a;
     color: white;
     border-radius: 5px;
     font-weight: bold;
     text-align: center;
     min-height: 20px;
     z-index: 10;
+     white-space: nowrap;
 }
 
 .btn-generar{

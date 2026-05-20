@@ -34,8 +34,6 @@
 /* Fantasma con flotación y ojos móviles */
 #ghost {
   position: relative;
-  scale: 0.8;
-  margin-top: -20px;
 }
 
 /* EFECTO DE FLOTACIÓN (sube y baja) */
