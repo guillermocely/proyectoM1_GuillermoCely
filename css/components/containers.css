@@ -47,10 +47,10 @@
     display: none;
     position: absolute;
     padding: 10px 20px;
-    background-color: #c09f0caf;
+    background-color: #e0e0ddbb;
     color: black;
     border-radius: 5px;
-     border: 5px solid hsla(125, 100%, 7%, 0.514);
+     border: 5px solid hsla(125, 95%, 32%, 0.514);
     font-weight: bold;
     text-align: center;
     min-height: 20px;
