@@ -1,0 +1,14 @@
+@media (max-width: 900px) {
+    .simulador-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .navbar-content {
+        flex-direction: column;
+    }
+    
+    .navbar-controls {
+        flex-direction: column;
+        width: 100%;
+    }
+}

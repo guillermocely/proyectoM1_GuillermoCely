@@ -1,0 +1,39 @@
+.header {
+    background-color: hsla(198, 9%, 28%, 0.808);
+    padding: 20px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-tittle {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 1.8rem;
+    color: hsl(300, 16%, 96%);
+}
+
+.btn-volver {
+    background: linear-gradient(45deg, #f093fb 0%, #f5576c 100%);
+    color: white;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(240, 147, 251, 0.4);
+    transition: transform 0.2s;
+}
+
+.btn-volver:hover {
+    transform: scale(1.05);
+}

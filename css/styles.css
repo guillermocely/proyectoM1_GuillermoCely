@@ -9,7 +9,6 @@
 
 /* Component styles */
 @import 'components/containers.css';
-@import 'components/colores.css';
 
 /* Responsive styles */
 @import 'responsive/media-queries.css';

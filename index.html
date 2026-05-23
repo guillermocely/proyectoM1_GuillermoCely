@@ -1,90 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Paleta de colores</title>
+    <title>Paleta de Colores - Bienvenida</title>
     <link rel="icon" type="image/png" href="imagen/favicon.png">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/landing-styles.css">
 </head>
 <body>
-       <header class="header">
-        <div class="header-container">
-             <h1 class="header-tittle"><img src="imagen/paleta-color.png" width="50" height="50" alt="Icono paleta de colores">PALETA DE COLORES</h1>
-        </div>
+    <div class="container">
+        <img src="imagen/paleta-color.png" alt="Paleta de Colores" class="logo">
+        <h1>Paleta de Colores</h1>
+        <p>Descubre y crea combinaciones de colores perfectas para tus proyectos. Genera paletas armoniosas con un solo clic.</p>
         
-    </header>
-
-    <div class="color-container">
-        <label for="selectorTamaño">Tamaño de la paleta:</label>
-        <select id="selectorTamaño">
-            <option value="6">6 colores</option>
-            <option value="8">8 colores</option>
-            <option value="9">9 colores</option>
-        </select>
-    </div>
-
-    <div class="color-container">
-        <label for="selectorFormato">Formato de color:</label>
-        <select id="selectorFormato">
-            <option value="hex">HEX</option>
-            <option value="hsl">HSL</option>
-        </select>
-    </div>
-
-    <div class="button-ghost-container">
-        <button class="btn-generar" id="botonGenerar">Generar Paleta</button>
-        <!-- Fantasma animado -->
-        <div id="ghost">
-          <div id="feedback" class="feedback"></div>
-          <div id="ghost-message"></div>
-          <div id="red">
-            <div id="pupil"></div>
-            <div id="pupil1"></div>
-            <div id="eye"></div>
-            <div id="eye1"></div>
-            <div id="top0"></div>
-            <div id="top1"></div>
-            <div id="top2"></div>
-            <div id="top3"></div>
-            <div id="top4"></div>
-            <div id="st0"></div>
-            <div id="st1"></div>
-            <div id="st2"></div>
-            <div id="st3"></div>
-            <div id="st4"></div>
-            <div id="st5"></div>
-            <div id="an1"></div>
-            <div id="an2"></div>
-            <div id="an3"></div>
-            <div id="an4"></div>
-            <div id="an5"></div>
-            <div id="an6"></div>
-            <div id="an7"></div>
-            <div id="an8"></div>
-            <div id="an9"></div>
-            <div id="an10"></div>
-            <div id="an11"></div>
-            <div id="an12"></div>
-            <div id="an13"></div>
-            <div id="an14"></div>
-            <div id="an15"></div>
-            <div id="an16"></div>
-            <div id="an17"></div>
-            <div id="an18"></div>
-          </div>
+        <div class="features">
+            <div class="feature">
+                <div class="feature-icon">🎨</div>
+                <div class="feature-text">Múltiples Formatos</div>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">✨</div>
+                <div class="feature-text">Armonías</div>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">❤️</div>
+                <div class="feature-text">Favoritos</div>
+            </div>
         </div>
-    </div>
 
-    <div class="resultados-container" id="contenedorResultados">
-        <h2 class="text-resultados">Colores Generados</h2>
-        <div class="resultados-grid" id="gridColores"></div>
+        <a href="paleta.html" class="btn-enter">Comenzar</a>
     </div>
-     
-     <footer>
-        <p>&copy; 2026 Paleta de Colores. Todos los derechos reservados.</p>
-     </footer>
-
-    <script src="script.js"></script>
 </body>
-</html> 
+</html>

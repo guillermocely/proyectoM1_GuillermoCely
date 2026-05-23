@@ -1,0 +1,54 @@
+.btn-agregar, .btn-aplicar, .btn-ver-codigo {
+    background: linear-gradient(45deg, #f093fb 0%, #f5576c 100%);
+    color: white;
+    padding: 12px 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(240, 147, 251, 0.4);
+    transition: transform 0.2s;
+}
+
+.btn-agregar:hover, .btn-aplicar:hover, .btn-ver-codigo:hover {
+    transform: scale(1.05);
+}
+
+.btn-aplicar-modificaciones {
+    width: 100%;
+    background: linear-gradient(45deg, #f093fb 0%, #f5576c 100%);
+    color: white;
+    padding: 12px 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(240, 147, 251, 0.4);
+    transition: transform 0.2s;
+    margin-top: 10px;
+}
+
+.btn-aplicar-modificaciones:hover {
+    transform: scale(1.05);
+}
+
+.btn-copiar {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: linear-gradient(45deg, #f093fb 0%, #f5576c 100%);
+    color: white;
+    padding: 8px 15px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.btn-copiar:hover {
+    transform: scale(1.05);
+}

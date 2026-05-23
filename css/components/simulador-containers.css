@@ -1,0 +1,238 @@
+.simulador-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.vista-previa-container {
+    max-width: 1200px;
+    margin: 0 auto 50px;
+    padding: 0 20px;
+}
+
+.vista-previa-container h2 {
+    color: white;
+    margin-bottom: 20px;
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+.pagina-preview {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+}
+
+.preview-navbar {
+    background: white;
+    padding: 20px;
+    border-radius: 10px 10px 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.preview-navbar h1 {
+    color: #333;
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.preview-nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.preview-nav-links a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.preview-nav-links a:hover {
+    color: #f5576c;
+}
+
+.preview-main {
+    display: flex;
+    background: white;
+    flex: 1;
+}
+
+.preview-aside {
+    background: #f5f5f5;
+    padding: 20px;
+    width: 200px;
+    border-right: 1px solid #ddd;
+}
+
+.preview-aside h3 {
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.preview-aside ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.preview-aside li {
+    margin-bottom: 10px;
+}
+
+.preview-aside a {
+    color: #333;
+    text-decoration: none;
+}
+
+.preview-aside a:hover {
+    color: #f5576c;
+}
+
+.preview-content {
+    flex: 1;
+    padding: 40px;
+}
+
+.preview-content h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.preview-content p {
+    color: #666;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.preview-btn {
+    background: #4CAF50;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-right: 10px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.preview-btn-secondary {
+    background: #2196F3;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s, color 0.3s;
+}
+
+.preview-footer {
+    background: white;
+    padding: 15px;
+    border-radius: 0 0 10px 10px;
+    text-align: center;
+}
+
+.preview-footer p {
+    color: #666;
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.colores-favoritos, .area-trabajo, .codigo-css {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 25px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.colores-favoritos h2, .area-trabajo h2, .codigo-css h2 {
+    color: white;
+    margin-bottom: 20px;
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+.favoritos-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    max-height: 400px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.color-favorito {
+    width: 100%;
+    height: 70px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s;
+    position: relative;
+    box-sizing: border-box;
+    min-width: 0;
+}
+
+.color-favorito:hover {
+    transform: scale(1.05);
+}
+
+.color-favorito.seleccionado {
+    outline: 3px solid #f5576c;
+    outline-offset: -3px;
+    box-shadow: 0 0 15px rgba(245, 87, 108, 0.5);
+}
+
+.color-favorito span {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    color: white;
+    font-size: 12px;
+    text-shadow: 1px 1px 2px black;
+}
+
+.canvas {
+    width: 100%;
+    height: 300px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.2);
+    transition: all 0.3s;
+}
+
+.canvas .placeholder {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1.1rem;
+}
+
+.codigo-container {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    padding: 15px;
+    position: relative;
+}
+
+#codigoCSS {
+    color: #00ff00;
+    font-family: 'Courier New', monospace;
+    font-size: 0.9rem;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}

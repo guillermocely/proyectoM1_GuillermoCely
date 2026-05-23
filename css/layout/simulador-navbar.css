@@ -1,0 +1,57 @@
+.navbar {
+    background-color: hsla(198, 9%, 28%, 0.808);
+    padding: 15px 0;
+    margin-bottom: 30px;
+}
+
+.navbar-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.navbar-controls {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.control-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.control-group label {
+    color: hsl(300, 32%, 41%);
+    font-weight: bold;
+}
+
+.control-group select {
+    padding: 8px 15px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.control-group select:hover {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.control-group select option {
+    background: #333;
+    color: white;
+}
+
+.navbar-buttons {
+    display: flex;
+    gap: 15px;
+}

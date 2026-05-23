@@ -1,8 +1,9 @@
 body{
     display: flex;
     flex-direction: column;
-    background-image: url('../../imagen/fondo.jpg'); /* imagen de fondo */
-    background-position: center;
+    background: #333633;
+    background: linear-gradient(143deg,rgba(51, 54, 51, 1) 18%, rgba(23, 33, 84, 1) 60%, rgba(102, 13, 90, 1) 83%);
+    background-attachment: fixed;
     background-size: cover;
     min-height: 100vh;
     width: 100%;

@@ -31,6 +31,113 @@
     display: inline-flex;
     gap: 15px;
 }
+
+/* Barra de navegación */
+.navbar {
+    background-color: hsla(200, 21%, 11%, 0.95);
+    padding: 15px 30px;
+    margin: 20px auto;
+    width: 100%;
+    max-width: 1200px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.navbar-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.navbar-controls {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.control-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.control-group label {
+    color: hsl(0, 0%, 90%);
+    font-size: 0.85rem;
+    font-weight: bold;
+}
+
+.control-group select {
+    padding: 8px 12px;
+    border-radius: 5px;
+    border: 2px solid hsla(180, 86%, 48%, 0.5);
+    background-color: hsla(0, 0%, 15%, 0.8);
+    color: white;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.control-group select:hover {
+    border-color: hsla(180, 86%, 48%, 0.8);
+    background-color: hsla(0, 0%, 20%, 0.9);
+}
+
+.navbar-buttons {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.navbar-buttons button {
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: none;
+    font-size: 0.9rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-generar {
+    background-color: rgba(65, 105, 225, 0.9);
+    color: white;
+}
+
+.btn-generar:hover {
+    background-color: rgba(241, 23, 197, 0.8);
+    transform: scale(1.05);
+}
+
+.btn-guardar {
+    background-color: rgba(46, 204, 113, 0.9);
+    color: white;
+}
+
+.btn-guardar:hover {
+    background-color: rgba(39, 174, 96, 0.9);
+    transform: scale(1.05);
+}
+
+.btn-favoritos {
+    background-color: rgba(241, 196, 15, 0.9);
+    color: white;
+}
+
+.btn-favoritos:hover {
+    background-color: rgba(243, 156, 18, 0.9);
+    transform: scale(1.05);
+}
+
+.ghost-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+}
 /* Fantasma con flotación y ojos móviles */
 #ghost {
   position: relative;

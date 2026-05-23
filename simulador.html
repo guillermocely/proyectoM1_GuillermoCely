@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador de Colores</title>
+    <link rel="icon" type="image/png" href="imagen/favicon.png">
+    <link rel="stylesheet" href="css/simulador-styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-container">
+            <h1 class="header-tittle">
+                   <a href="index.html">
+                <img src="imagen/paleta-color.png" width="50" height="50" alt="Icono paleta de colores">
+                   </a>
+                SIMULADOR DE COLORES
+            </h1>
+            <button class="btn-volver" id="btnVolver">← Volver</button>
+        </div>
+    </header>
+
+    <nav class="navbar">
+        <div class="navbar-content">
+            <div class="navbar-controls">
+                <div class="control-group">
+                    <label for="tipoGeneracion">Tipo:</label>
+                    <select id="tipoGeneracion">
+                        <option value="solid">Color Sólido</option>
+                        <option value="gradiente">Gradiente</option>
+                        <option value="combinado">Combinado</option>
+                    </select>
+                </div>
+
+                <div class="control-group" id="grupoGradiente" style="display: none;">
+                    <label for="tipoGradiente">Dirección:</label>
+                    <select id="tipoGradiente">
+                        <option value="to right">Horizontal</option>
+                        <option value="to bottom">Vertical</option>
+                        <option value="to bottom right">Diagonal</option>
+                        <option value="radial">Radial</option>
+                    </select>
+                </div>
+
+                <div class="control-group">
+                    <label for="seccionSeleccion">Sección:</label>
+                    <select id="seccionSeleccion">
+                        <option value="navbar">Navbar</option>
+                        <option value="aside">Aside</option>
+                        <option value="content">Contenido</option>
+                        <option value="footer">Footer</option>
+                        <option value="btnPrincipal">Botón Principal</option>
+                        <option value="btnSecundario">Botón Secundario</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="navbar-buttons">
+                <button class="btn-agregar" id="btnAgregarFavoritos">Agregar Favoritos</button>
+                <button class="btn-aplicar" id="btnAplicarColor">Aplicar Color</button>
+                <button class="btn-ver-codigo" id="btnVerCodigo">Ver Código CSS</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="simulador-container">
+        <div class="colores-favoritos">
+            <h2>Colores Favoritos</h2>
+            <div class="favoritos-grid" id="favoritosGrid"></div>
+        </div>
+
+        <div class="area-trabajo">
+            <h2>Área de Trabajo</h2>
+            <div class="canvas" id="canvas">
+                <p class="placeholder">Selecciona colores y genera CSS</p>
+            </div>
+            <div class="color-controls">
+                <div class="control-item">
+                    <label for="contraste">Contraste: <span id="contrasteValue">100%</span></label>
+                    <input type="range" id="contraste" min="0" max="200" value="100">
+                </div>
+                <div class="control-item">
+                    <label for="luminosidad">Luminosidad: <span id="luminosidadValue">100%</span></label>
+                    <input type="range" id="luminosidad" min="0" max="200" value="100">
+                </div>
+                <div class="control-item">
+                    <label for="intensidad">Intensidad: <span id="intensidadValue">100%</span></label>
+                    <input type="range" id="intensidad" min="0" max="200" value="100">
+                </div>
+                <button class="btn-aplicar-modificaciones" id="btnAplicarModificaciones">Aplicar Modificaciones</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="vista-previa-container">
+        <h2>Vista Previa de Página</h2>
+        <div class="pagina-preview" id="paginaPreview">
+            <nav class="preview-navbar">
+                <h1>Mi Sitio Web</h1>
+                <div class="preview-nav-links">
+                    <a href="#">Inicio</a>
+                    <a href="#">Servicios</a>
+                    <a href="#">Contacto</a>
+                </div>
+            </nav>
+            <div class="preview-main">
+                <aside class="preview-aside">
+                    <h3>Sidebar</h3>
+                    <ul>
+                        <li><a href="#">Enlace 1</a></li>
+                        <li><a href="#">Enlace 2</a></li>
+                        <li><a href="#">Enlace 3</a></li>
+                    </ul>
+                </aside>
+                <main class="preview-content">
+                    <h2>Bienvenido a mi página</h2>
+                    <p>Este es un ejemplo de cómo se vería tu página con los colores seleccionados distribuidos en diferentes secciones.</p>
+                    <button class="preview-btn">Botón Principal</button>
+                    <button class="preview-btn-secondary">Botón Secundario</button>
+                </main>
+            </div>
+            <footer class="preview-footer">
+                <p>&copy; 2026 Mi Sitio Web. Todos los derechos reservados.</p>
+            </footer>
+        </div>
+    </div>
+
+    <!-- Modal para código CSS -->
+    <div class="modal" id="modalCSS">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Código CSS Generado</h3>
+                <button class="modal-close" id="modalClose">×</button>
+            </div>
+            <div class="modal-body">
+                <pre id="codigoCSS"><code>background: #ffffff;</code></pre>
+            </div>
+            <div class="modal-footer">
+                <button class="btn-copiar" id="btnCopiarCSS">Copiar</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Simulador de Colores. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="js/utils.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/color-modifications.js"></script>
+    <script src="js/preview.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
