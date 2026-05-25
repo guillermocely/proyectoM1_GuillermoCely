@@ -1,24 +1,39 @@
-.header {
-    background-color: hsla(198, 9%, 28%, 0.808);
-    padding: 20px 0;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-}
-
 .header-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    width: 100%;
+    background-color: hsla(200, 21%, 11%, 0.886);
+    min-height: auto;
+    text-align: center;
+    margin-top: -20px;
+    padding: 30px;
 }
 
-.header-tittle {
+.header-tittle{
+    color: rgb(206, 7, 93);
+    position: relative;
+    top: 15px;
+    left: 10px;
+    user-select: none; 
     display: flex;
     align-items: center;
     gap: 15px;
-    font-size: 1.8rem;
-    color: hsl(300, 16%, 96%);
+}
+
+.header-tittle:hover {
+    color: rgba(9, 236, 138, 0.883);
+}
+
+.header-tittle img {
+    width: 60px;
+    height: 60px;
+    position: relative;
+    left: 4px;
+    top: 10px;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .btn-volver {

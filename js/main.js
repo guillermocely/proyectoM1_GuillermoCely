@@ -31,6 +31,15 @@ function inicializarElementos() {
     btnAplicarModificaciones = document.getElementById('btnAplicarModificaciones');
 }
 
+function resetearControles() {
+    contraste.value = 100;
+    luminosidad.value = 100;
+    intensidad.value = 100;
+    contrasteValue.textContent = '100%';
+    luminosidadValue.textContent = '100%';
+    intensidadValue.textContent = '100%';
+}
+
 function toggleSeleccionColor(index, elemento) {
     const indexSeleccionado = coloresSeleccionados.findIndex(c => c.hex === coloresFavoritos[index].hex);
     
@@ -41,13 +50,9 @@ function toggleSeleccionColor(index, elemento) {
         gradienteBase = null;
         canvas.style.background = colorBase;
         canvas.style.backgroundColor = colorBase;
+        canvas.style.filter = 'none';
         canvas.querySelector('.placeholder')?.remove();
-        contraste.value = 100;
-        luminosidad.value = 100;
-        intensidad.value = 100;
-        contrasteValue.textContent = '100%';
-        luminosidadValue.textContent = '100%';
-        intensidadValue.textContent = '100%';
+        resetearControles();
     } else {
         coloresSeleccionados.splice(indexSeleccionado, 1);
         elemento.classList.remove('seleccionado');
@@ -56,10 +61,12 @@ function toggleSeleccionColor(index, elemento) {
             gradienteBase = null;
             canvas.style.background = colorBase;
             canvas.style.backgroundColor = colorBase;
+            canvas.style.filter = 'none';
         } else {
             colorBase = null;
             gradienteBase = null;
             canvas.style.background = 'rgba(255, 255, 255, 0.2)';
+            canvas.style.filter = 'none';
         }
     }
 }
@@ -82,12 +89,7 @@ function generarCSS() {
         css = `background: ${colorModificado};`;
         canvas.style.background = colorModificado;
         aplicarColorASeccion(seccion, colorModificado);
-        contraste.value = 100;
-        luminosidad.value = 100;
-        intensidad.value = 100;
-        contrasteValue.textContent = '100%';
-        luminosidadValue.textContent = '100%';
-        intensidadValue.textContent = '100%';
+        resetearControles();
     } else if (tipo === 'gradiente') {
         const direccion = tipoGradiente.value;
         const colores = coloresSeleccionados.map(c => c.hex).join(', ');
@@ -107,12 +109,7 @@ function generarCSS() {
             colorBase = null;
             aplicarGradienteASeccion(seccion, gradiente);
         }
-        contraste.value = 100;
-        luminosidad.value = 100;
-        intensidad.value = 100;
-        contrasteValue.textContent = '100%';
-        luminosidadValue.textContent = '100%';
-        intensidadValue.textContent = '100%';
+        resetearControles();
     } else if (tipo === 'combinado') {
         const direccion = tipoGradiente.value;
         const colores = coloresSeleccionados.map(c => c.hex).join(', ');
@@ -132,12 +129,7 @@ function generarCSS() {
             colorBase = null;
             aplicarGradienteASeccion(seccion, gradiente);
         }
-        contraste.value = 100;
-        luminosidad.value = 100;
-        intensidad.value = 100;
-        contrasteValue.textContent = '100%';
-        luminosidadValue.textContent = '100%';
-        intensidadValue.textContent = '100%';
+        resetearControles();
     }
     
     codigoCSS.innerHTML = `<code>${css}</code>`;

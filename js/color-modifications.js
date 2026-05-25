@@ -91,14 +91,6 @@ function aplicarColorConFiltrosASeccion(seccion, color, contraste, luminosidad, 
                 elemento.style.color = contrastColor;
             }
             break;
-        case 'buttons':
-            const botones = paginaPreview.querySelectorAll('.preview-btn, .preview-btn-secondary');
-            botones.forEach(btn => {
-                btn.style.background = color;
-                btn.style.filter = `contrast(${contraste/100}) brightness(${luminosidad/100}) saturate(${intensidad/100})`;
-                btn.style.color = contrastColor;
-            });
-            break;
     }
 }
 
@@ -138,14 +130,6 @@ function aplicarGradienteConFiltrosASeccion(seccion, gradiente, contraste, lumin
                 elemento.style.filter = `contrast(${contraste/100}) brightness(${luminosidad/100}) saturate(${intensidad/100})`;
                 elemento.style.color = contrastColor;
             }
-            break;
-        case 'buttons':
-            const botones = paginaPreview.querySelectorAll('.preview-btn, .preview-btn-secondary');
-            botones.forEach(btn => {
-                btn.style.background = gradiente;
-                btn.style.filter = `contrast(${contraste/100}) brightness(${luminosidad/100}) saturate(${intensidad/100})`;
-                btn.style.color = contrastColor;
-            });
             break;
     }
 }

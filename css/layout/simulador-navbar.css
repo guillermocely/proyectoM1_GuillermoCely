@@ -1,49 +1,54 @@
 .navbar {
-    background-color: hsla(198, 9%, 28%, 0.808);
-    padding: 15px 0;
-    margin-bottom: 30px;
+    background-color: hsla(200, 21%, 11%, 0.95);
+    padding: 15px 30px;
+    margin: 20px auto;
+    width: 100%;
+    max-width: 1200px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
 .navbar-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
     gap: 20px;
+    flex-wrap: wrap;
 }
 
 .navbar-controls {
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
+    align-items: center;
 }
 
 .control-group {
     display: flex;
-    align-items: center;
-    gap: 10px;
+    flex-direction: column;
+    gap: 5px;
 }
 
 .control-group label {
-    color: hsl(300, 32%, 41%);
+    color: hsl(0, 0%, 90%);
+    font-size: 0.85rem;
     font-weight: bold;
 }
 
 .control-group select {
-    padding: 8px 15px;
-    border-radius: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    background: rgba(0, 0, 0, 0.5);
+    padding: 8px 12px;
+    border-radius: 5px;
+    border: 2px solid hsla(180, 86%, 48%, 0.5);
+    background-color: hsla(0, 0%, 15%, 0.8);
     color: white;
+    font-size: 0.9rem;
     cursor: pointer;
-    font-size: 1rem;
+    transition: all 0.3s ease;
 }
 
 .control-group select:hover {
-    background: rgba(0, 0, 0, 0.7);
+    border-color: hsla(180, 86%, 48%, 0.8);
+    background-color: hsla(0, 0%, 20%, 0.9);
 }
 
 .control-group select option {
@@ -53,5 +58,6 @@
 
 .navbar-buttons {
     display: flex;
-    gap: 15px;
+    gap: 10px;
+    flex-wrap: wrap;
 }

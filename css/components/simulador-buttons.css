@@ -1,17 +1,40 @@
-.btn-agregar, .btn-aplicar, .btn-ver-codigo {
-    background: linear-gradient(45deg, #f093fb 0%, #f5576c 100%);
-    color: white;
-    padding: 12px 25px;
-    font-size: 1rem;
-    font-weight: bold;
+.navbar-buttons button {
+    padding: 10px 20px;
+    border-radius: 8px;
     border: none;
-    border-radius: 25px;
+    font-size: 0.9rem;
+    font-weight: bold;
     cursor: pointer;
-    box-shadow: 0 4px 15px rgba(240, 147, 251, 0.4);
-    transition: transform 0.2s;
+    transition: all 0.3s ease;
 }
 
-.btn-agregar:hover, .btn-aplicar:hover, .btn-ver-codigo:hover {
+.btn-agregar {
+    background-color: rgba(65, 105, 225, 0.9);
+    color: white;
+}
+
+.btn-agregar:hover {
+    background-color: rgba(241, 23, 197, 0.8);
+    transform: scale(1.05);
+}
+
+.btn-aplicar {
+    background-color: rgba(46, 204, 113, 0.9);
+    color: white;
+}
+
+.btn-aplicar:hover {
+    background-color: rgba(39, 174, 96, 0.9);
+    transform: scale(1.05);
+}
+
+.btn-ver-codigo {
+    background-color: rgba(241, 196, 15, 0.9);
+    color: white;
+}
+
+.btn-ver-codigo:hover {
+    background-color: rgba(243, 156, 18, 0.9);
     transform: scale(1.05);
 }
 

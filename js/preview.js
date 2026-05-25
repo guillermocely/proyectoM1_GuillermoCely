@@ -30,18 +30,6 @@ function aplicarColorASeccion(seccion, color) {
             elemento.style.backgroundColor = color;
             elemento.querySelector('p').style.color = contrastColor;
             break;
-        case 'btnPrincipal':
-            elemento = paginaPreview.querySelector('.preview-btn');
-            elemento.style.background = color;
-            elemento.style.backgroundColor = color;
-            elemento.style.color = contrastColor;
-            break;
-        case 'btnSecundario':
-            elemento = paginaPreview.querySelector('.preview-btn-secondary');
-            elemento.style.background = color;
-            elemento.style.backgroundColor = color;
-            elemento.style.color = contrastColor;
-            break;
     }
 }
 
@@ -72,16 +60,6 @@ function aplicarGradienteASeccion(seccion, gradiente) {
             elemento.style.background = gradiente;
             elemento.querySelector('p').style.color = '#333';
             break;
-        case 'btnPrincipal':
-            elemento = paginaPreview.querySelector('.preview-btn');
-            elemento.style.background = gradiente;
-            elemento.style.color = 'white';
-            break;
-        case 'btnSecundario':
-            elemento = paginaPreview.querySelector('.preview-btn-secondary');
-            elemento.style.background = gradiente;
-            elemento.style.color = 'white';
-            break;
     }
 }
 
@@ -90,8 +68,6 @@ function aplicarColorAPagina(color) {
     const aside = paginaPreview.querySelector('.preview-aside');
     const content = paginaPreview.querySelector('.preview-content');
     const footer = paginaPreview.querySelector('.preview-footer');
-    const btnPrincipal = paginaPreview.querySelector('.preview-btn');
-    const btnSecundario = paginaPreview.querySelector('.preview-btn-secondary');
     
     navbar.style.background = color;
     aside.style.background = color;
@@ -110,12 +86,6 @@ function aplicarColorAPagina(color) {
     content.querySelector('p').style.color = '#666';
     
     footer.querySelector('p').style.color = contrastColor;
-    
-    btnPrincipal.style.background = color;
-    btnPrincipal.style.color = contrastColor;
-    
-    btnSecundario.style.background = getDarkerColor(color);
-    btnSecundario.style.color = contrastColor;
 }
 
 function aplicarGradienteAPagina(gradiente) {
@@ -123,8 +93,6 @@ function aplicarGradienteAPagina(gradiente) {
     const aside = paginaPreview.querySelector('.preview-aside');
     const content = paginaPreview.querySelector('.preview-content');
     const footer = paginaPreview.querySelector('.preview-footer');
-    const btnPrincipal = paginaPreview.querySelector('.preview-btn');
-    const btnSecundario = paginaPreview.querySelector('.preview-btn-secondary');
     
     navbar.style.background = gradiente;
     aside.style.background = gradiente;
@@ -141,10 +109,4 @@ function aplicarGradienteAPagina(gradiente) {
     content.querySelector('p').style.color = '#666';
     
     footer.querySelector('p').style.color = '#333';
-    
-    btnPrincipal.style.background = '#4CAF50';
-    btnPrincipal.style.color = 'white';
-    
-    btnSecundario.style.background = '#2196F3';
-    btnSecundario.style.color = 'white';
 }
