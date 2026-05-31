@@ -1,4 +1,4 @@
-/* Landing page styles */
+/* Estilos de la página de inicio */
 @import 'base/landing-reset.css';
-@import 'layout/landing-body.css';
-@import 'components/landing-container.css';
+@import 'diseño/landing-body.css';
+@import 'componentes/landing-container.css';

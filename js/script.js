@@ -58,22 +58,51 @@ function generarColoresArmonia(cantidad, armonia) {
         }
     } else if (armonia === 'complementario') {
         colores.push(colorBase);
-        const complementario = generarComplementario(colorBase);
-        for (let i = 1; i < cantidad; i++) {
-            const color = i % 2 === 0 ? colorBase : complementario;
-            if (!colores.some(c => c.hex === color.hex)) {
-                colores.push(color);
+        const hslBase = hexToHsl(colorBase.hex);
+        const hComplementario = (hslBase.h + 180) % 360;
+        const complementario = hslToHex(hComplementario, hslBase.s, hslBase.l);
+        colores.push(complementario);
+        
+        for (let i = 2; i < cantidad; i++) {
+            const variacionL = Math.max(10, Math.min(90, hslBase.l + (i % 2 === 0 ? 15 : -15)));
+            const nuevoColor = hslToHex(hslBase.h, hslBase.s, variacionL);
+            if (!colores.some(c => c.hex === nuevoColor.hex)) {
+                colores.push(nuevoColor);
             } else {
-                const nuevoColor = generarColorAleatorio();
-                if (!colores.some(c => c.hex === nuevoColor.hex)) {
-                    colores.push(nuevoColor);
+                const colorAlt = generarColorAleatorio();
+                if (!colores.some(c => c.hex === colorAlt.hex)) {
+                    colores.push(colorAlt);
+                }
+            }
+        }
+    } else if (armonia === 'complementario-dividido') {
+        const hslBase = hexToHsl(colorBase.hex);
+        colores.push(colorBase);
+        
+        const h1 = (hslBase.h + 150) % 360;
+        const color1 = hslToHex(h1, hslBase.s, hslBase.l);
+        colores.push(color1);
+        
+        const h2 = (hslBase.h + 210) % 360;
+        const color2 = hslToHex(h2, hslBase.s, hslBase.l);
+        colores.push(color2);
+        
+        for (let i = 3; i < cantidad; i++) {
+            const variacionL = Math.max(10, Math.min(90, hslBase.l + (i % 2 === 0 ? 10 : -10)));
+            const nuevoColor = hslToHex(hslBase.h, hslBase.s, variacionL);
+            if (!colores.some(c => c.hex === nuevoColor.hex)) {
+                colores.push(nuevoColor);
+            } else {
+                const colorAlt = generarColorAleatorio();
+                if (!colores.some(c => c.hex === colorAlt.hex)) {
+                    colores.push(colorAlt);
                 }
             }
         }
     } else if (armonia === 'analogo') {
         const hslBase = hexToHsl(colorBase.hex);
         for (let i = 0; i < cantidad; i++) {
-            const h = (hslBase.h + i * 30) % 360;
+            const h = (hslBase.h + (i - Math.floor(cantidad/2)) * 30 + 360) % 360;
             const nuevoColor = hslToHex(h, hslBase.s, hslBase.l);
             if (!colores.some(c => c.hex === nuevoColor.hex)) {
                 colores.push(nuevoColor);
@@ -98,10 +127,52 @@ function generarColoresArmonia(cantidad, armonia) {
                 }
             }
         }
+    } else if (armonia === 'tetradico') {
+        const hslBase = hexToHsl(colorBase.hex);
+        colores.push(colorBase);
+        
+        const h1 = (hslBase.h + 90) % 360;
+        const color1 = hslToHex(h1, hslBase.s, hslBase.l);
+        colores.push(color1);
+        
+        const h2 = (hslBase.h + 180) % 360;
+        const color2 = hslToHex(h2, hslBase.s, hslBase.l);
+        colores.push(color2);
+        
+        const h3 = (hslBase.h + 270) % 360;
+        const color3 = hslToHex(h3, hslBase.s, hslBase.l);
+        colores.push(color3);
+        
+        for (let i = 4; i < cantidad; i++) {
+            const variacionS = Math.max(0, Math.min(100, hslBase.s + (i % 2 === 0 ? 10 : -10)));
+            const nuevoColor = hslToHex(hslBase.h, variacionS, hslBase.l);
+            if (!colores.some(c => c.hex === nuevoColor.hex)) {
+                colores.push(nuevoColor);
+            } else {
+                const colorAlt = generarColorAleatorio();
+                if (!colores.some(c => c.hex === colorAlt.hex)) {
+                    colores.push(colorAlt);
+                }
+            }
+        }
+    } else if (armonia === 'cuadrado') {
+        const hslBase = hexToHsl(colorBase.hex);
+        for (let i = 0; i < cantidad; i++) {
+            const h = (hslBase.h + i * 90) % 360;
+            const nuevoColor = hslToHex(h, hslBase.s, hslBase.l);
+            if (!colores.some(c => c.hex === nuevoColor.hex)) {
+                colores.push(nuevoColor);
+            } else {
+                const colorAlt = generarColorAleatorio();
+                if (!colores.some(c => c.hex === colorAlt.hex)) {
+                    colores.push(colorAlt);
+                }
+            }
+        }
     } else if (armonia === 'monocromatico') {
         const hslBase = hexToHsl(colorBase.hex);
         for (let i = 0; i < cantidad; i++) {
-            const l = Math.max(10, Math.min(90, hslBase.l + (i - cantidad/2) * 15));
+            const l = Math.max(10, Math.min(90, hslBase.l + (i - cantidad/2) * 12));
             const nuevoColor = hslToHex(hslBase.h, hslBase.s, l);
             if (!colores.some(c => c.hex === nuevoColor.hex)) {
                 colores.push(nuevoColor);

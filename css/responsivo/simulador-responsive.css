@@ -1,0 +1,265 @@
+/* Media queries para el simulador */
+
+/* Tablet y móviles grandes */
+@media (max-width: 900px) {
+    .simulador-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .navbar-content {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .navbar-controls {
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+    }
+    
+    .control-group {
+        width: 100%;
+    }
+    
+    .control-group select {
+        width: 100%;
+    }
+    
+    .navbar-buttons {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    .navbar-buttons button {
+        flex: 1;
+        min-width: 120px;
+    }
+    
+    .colores-favoritos, .area-trabajo {
+        padding: 20px;
+    }
+    
+    .favoritos-grid {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        gap: 8px;
+    }
+    
+    .color-favorito {
+        height: 60px;
+    }
+    
+    .canvas {
+        height: 250px;
+    }
+    
+    .color-controls {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .control-item {
+        width: 100%;
+    }
+    
+    .control-item input {
+        width: 100%;
+    }
+    
+    .vista-previa-container {
+        padding: 0 15px;
+    }
+    
+    .pagina-preview {
+        padding: 20px;
+        min-height: 400px;
+    }
+    
+    .barra-navegacion-previa {
+        padding: 15px;
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .enlaces-navegacion-previos {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+    
+    .principal-previo {
+        flex-direction: column;
+    }
+    
+    .barra-lateral-previa {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #ddd;
+        padding: 15px;
+    }
+    
+    .contenido-previo {
+        padding: 20px;
+    }
+}
+
+/* Móviles pequeños */
+@media (max-width: 480px) {
+    .header-container {
+        padding: 15px 10px;
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .header-tittle {
+        font-size: 1rem;
+        left: 0;
+        top: 0;
+        justify-content: center;
+    }
+    
+    .header-tittle img {
+        width: 35px;
+        height: 35px;
+        left: 0;
+        top: 0;
+    }
+    
+    .btn-volver {
+        padding: 8px 15px;
+        font-size: 0.85rem;
+    }
+    
+    .navbar {
+        padding: 10px 15px;
+        margin: 10px 5px;
+        width: calc(100% - 10px);
+    }
+    
+    .navbar-content {
+        gap: 10px;
+    }
+    
+    .navbar-controls {
+        gap: 8px;
+    }
+    
+    .control-group label {
+        font-size: 0.75rem;
+    }
+    
+    .control-group select {
+        padding: 6px 10px;
+        font-size: 0.85rem;
+    }
+    
+    .navbar-buttons button {
+        padding: 8px 12px;
+        font-size: 0.8rem;
+        min-width: 100px;
+    }
+    
+    .simulador-container {
+        gap: 15px;
+        padding: 0 15px;
+    }
+    
+    .colores-favoritos h2, .area-trabajo h2 {
+        font-size: 1.1rem;
+    }
+    
+    .favoritos-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 6px;
+    }
+    
+    .color-favorito {
+        height: 50px;
+    }
+    
+    .color-favorito span {
+        font-size: 10px;
+    }
+    
+    .canvas {
+        height: 200px;
+    }
+    
+    .canvas .placeholder {
+        font-size: 0.9rem;
+    }
+    
+    .control-item label {
+        font-size: 0.85rem;
+    }
+    
+    .btn-aplicar-modificaciones {
+        padding: 10px 15px;
+        font-size: 0.9rem;
+    }
+    
+    .vista-previa-container {
+        padding: 0 10px;
+        margin-bottom: 30px;
+    }
+    
+    .vista-previa-container h2 {
+        font-size: 1.1rem;
+    }
+    
+    .pagina-preview {
+        padding: 15px;
+        min-height: 350px;
+    }
+    
+    .barra-navegacion-previa h1 {
+        font-size: 1.2rem;
+    }
+    
+    .barra-lateral-previa h3 {
+        font-size: 1rem;
+    }
+    
+    .contenido-previo h2 {
+        font-size: 1.1rem;
+    }
+    
+    .contenido-previo p {
+        font-size: 0.9rem;
+    }
+    
+    .pie-pagina-previo p {
+        font-size: 0.8rem;
+    }
+    
+    .modal-content {
+        width: 95%;
+        margin: 5% auto;
+        max-width: none;
+    }
+    
+    .modal-header h3 {
+        font-size: 1.1rem;
+    }
+    
+    #codigoCSS {
+        font-size: 0.8rem;
+    }
+}
+
+/* Pantallas muy grandes */
+@media (min-width: 1400px) {
+    .simulador-container {
+        max-width: 1400px;
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .vista-previa-container {
+        max-width: 1400px;
+    }
+    
+    .favoritos-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

@@ -8,14 +8,14 @@
     transition: all 0.3s ease;
 }
 
-.btn-agregar {
-    background-color: rgba(65, 105, 225, 0.9);
+.btn-volver {
+    background: linear-gradient(45deg, #f093fb 0%, #f5576c 100%);
     color: white;
 }
 
-.btn-agregar:hover {
-    background-color: rgba(241, 23, 197, 0.8);
+.btn-volver:hover {
     transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(240, 147, 251, 0.4);
 }
 
 .btn-aplicar {

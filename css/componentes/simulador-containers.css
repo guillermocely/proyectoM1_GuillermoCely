@@ -32,7 +32,7 @@
     flex-direction: column;
 }
 
-.preview-navbar {
+.barra-navegacion-previa {
     background: white;
     padding: 20px;
     border-radius: 10px 10px 0 0;
@@ -41,89 +41,89 @@
     align-items: center;
 }
 
-.preview-navbar h1 {
+.barra-navegacion-previa h1 {
     color: #333;
     margin: 0;
     font-size: 1.5rem;
 }
 
-.preview-nav-links {
+.enlaces-navegacion-previos {
     display: flex;
     gap: 20px;
 }
 
-.preview-nav-links a {
+.enlaces-navegacion-previos a {
     color: #333;
     text-decoration: none;
     font-weight: bold;
 }
 
-.preview-nav-links a:hover {
+.enlaces-navegacion-previos a:hover {
     color: #f5576c;
 }
 
-.preview-main {
+.principal-previo {
     display: flex;
     background: white;
     flex: 1;
 }
 
-.preview-aside {
+.barra-lateral-previa {
     background: #f5f5f5;
     padding: 20px;
     width: 200px;
     border-right: 1px solid #ddd;
 }
 
-.preview-aside h3 {
+.barra-lateral-previa h3 {
     color: #333;
     margin-top: 0;
     margin-bottom: 15px;
 }
 
-.preview-aside ul {
+.barra-lateral-previa ul {
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
-.preview-aside li {
+.barra-lateral-previa li {
     margin-bottom: 10px;
 }
 
-.preview-aside a {
+.barra-lateral-previa a {
     color: #333;
     text-decoration: none;
 }
 
-.preview-aside a:hover {
+.barra-lateral-previa a:hover {
     color: #f5576c;
 }
 
-.preview-content {
+.contenido-previo {
     flex: 1;
     padding: 40px;
 }
 
-.preview-content h2 {
+.contenido-previo h2 {
     color: #333;
     margin-bottom: 20px;
 }
 
-.preview-content p {
+.contenido-previo p {
     color: #666;
     margin-bottom: 20px;
     line-height: 1.6;
 }
 
-.preview-footer {
+.pie-pagina-previo {
     background: white;
     padding: 15px;
     border-radius: 0 0 10px 10px;
     text-align: center;
 }
 
-.preview-footer p {
+.pie-pagina-previo p {
     color: #666;
     margin: 0;
     font-size: 0.9rem;

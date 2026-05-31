@@ -1,14 +1,14 @@
-/* Base styles */
+/* Estilos base */
 @import 'base/reset.css';
 @import 'base/typography.css';
 
-/* Layout styles */
-@import 'layout/body.css';
-@import 'layout/header.css';
-@import 'layout/footer.css';
+/* Estilos de diseño */
+@import 'diseño/body.css';
+@import 'diseño/header.css';
+@import 'diseño/footer.css';
 
-/* Component styles */
-@import 'components/containers.css';
+/* Estilos de componentes */
+@import 'componentes/containers.css';
 
-/* Responsive styles */
-@import 'responsive/media-queries.css';
+/* Estilos responsivos */
+@import 'responsivo/media-queries.css';

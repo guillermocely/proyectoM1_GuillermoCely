@@ -1,5 +1,5 @@
 let btnVolver, tipoGeneracion, tipoGradiente, grupoGradiente, seccionSeleccion;
-let btnAgregarFavoritos, btnAplicarColor, btnVerCodigo;
+let btnAplicarColor, btnVerCodigo;
 let favoritosGrid, canvas, paginaPreview;
 let modalCSS, modalClose, codigoCSS, btnCopiarCSS;
 let contraste, luminosidad, intensidad;
@@ -12,7 +12,6 @@ function inicializarElementos() {
     tipoGradiente = document.getElementById('tipoGradiente');
     grupoGradiente = document.getElementById('grupoGradiente');
     seccionSeleccion = document.getElementById('seccionSeleccion');
-    btnAgregarFavoritos = document.getElementById('btnAgregarFavoritos');
     btnAplicarColor = document.getElementById('btnAplicarColor');
     btnVerCodigo = document.getElementById('btnVerCodigo');
     favoritosGrid = document.getElementById('favoritosGrid');
@@ -134,6 +133,15 @@ function generarCSS() {
     
     codigoCSS.innerHTML = `<code>${css}</code>`;
     canvas.querySelector('.placeholder')?.remove();
+    
+    // Limpiar selección después de aplicar el color
+    limpiarSeleccion();
+}
+
+function limpiarSeleccion() {
+    coloresSeleccionados = [];
+    const elementosSeleccionados = favoritosGrid.querySelectorAll('.seleccionado');
+    elementosSeleccionados.forEach(el => el.classList.remove('seleccionado'));
 }
 
 function verCodigoCSS() {
@@ -174,9 +182,8 @@ function verCodigoCSS() {
 }
 
 function inicializarEventListeners() {
-    if (!btnAgregarFavoritos || !btnAplicarColor || !btnVerCodigo) return;
+    if (!btnAplicarColor || !btnVerCodigo) return;
 
-    btnAgregarFavoritos.addEventListener('click', cargarFavoritos);
     btnAplicarColor.addEventListener('click', generarCSS);
     btnVerCodigo.addEventListener('click', verCodigoCSS);
 

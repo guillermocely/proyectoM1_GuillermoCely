@@ -60,7 +60,7 @@ function aplicarColorConFiltrosASeccion(seccion, color, contraste, luminosidad, 
     
     switch(seccion) {
         case 'navbar':
-            elemento = paginaPreview.querySelector('.preview-navbar');
+            elemento = paginaPreview.querySelector('.barra-navegacion-previa');
             if (elemento) {
                 elemento.style.background = color;
                 elemento.style.filter = `contrast(${contraste/100}) brightness(${luminosidad/100}) saturate(${intensidad/100})`;
@@ -68,7 +68,7 @@ function aplicarColorConFiltrosASeccion(seccion, color, contraste, luminosidad, 
             }
             break;
         case 'aside':
-            elemento = paginaPreview.querySelector('.preview-aside');
+            elemento = paginaPreview.querySelector('.barra-lateral-previa');
             if (elemento) {
                 elemento.style.background = color;
                 elemento.style.filter = `contrast(${contraste/100}) brightness(${luminosidad/100}) saturate(${intensidad/100})`;
@@ -76,7 +76,7 @@ function aplicarColorConFiltrosASeccion(seccion, color, contraste, luminosidad, 
             }
             break;
         case 'content':
-            elemento = paginaPreview.querySelector('.preview-content');
+            elemento = paginaPreview.querySelector('.contenido-previo');
             if (elemento) {
                 elemento.style.background = color;
                 elemento.style.filter = `contrast(${contraste/100}) brightness(${luminosidad/100}) saturate(${intensidad/100})`;
@@ -84,7 +84,7 @@ function aplicarColorConFiltrosASeccion(seccion, color, contraste, luminosidad, 
             }
             break;
         case 'footer':
-            elemento = paginaPreview.querySelector('.preview-footer');
+            elemento = paginaPreview.querySelector('.pie-pagina-previo');
             if (elemento) {
                 elemento.style.background = color;
                 elemento.style.filter = `contrast(${contraste/100}) brightness(${luminosidad/100}) saturate(${intensidad/100})`;
@@ -100,7 +100,7 @@ function aplicarGradienteConFiltrosASeccion(seccion, gradiente, contraste, lumin
     
     switch(seccion) {
         case 'navbar':
-            elemento = paginaPreview.querySelector('.preview-navbar');
+            elemento = paginaPreview.querySelector('.barra-navegacion-previa');
             if (elemento) {
                 elemento.style.background = gradiente;
                 elemento.style.filter = `contrast(${contraste/100}) brightness(${luminosidad/100}) saturate(${intensidad/100})`;
@@ -108,7 +108,7 @@ function aplicarGradienteConFiltrosASeccion(seccion, gradiente, contraste, lumin
             }
             break;
         case 'aside':
-            elemento = paginaPreview.querySelector('.preview-aside');
+            elemento = paginaPreview.querySelector('.barra-lateral-previa');
             if (elemento) {
                 elemento.style.background = gradiente;
                 elemento.style.filter = `contrast(${contraste/100}) brightness(${luminosidad/100}) saturate(${intensidad/100})`;
@@ -116,7 +116,7 @@ function aplicarGradienteConFiltrosASeccion(seccion, gradiente, contraste, lumin
             }
             break;
         case 'content':
-            elemento = paginaPreview.querySelector('.preview-content');
+            elemento = paginaPreview.querySelector('.contenido-previo');
             if (elemento) {
                 elemento.style.background = gradiente;
                 elemento.style.filter = `contrast(${contraste/100}) brightness(${luminosidad/100}) saturate(${intensidad/100})`;
@@ -124,7 +124,7 @@ function aplicarGradienteConFiltrosASeccion(seccion, gradiente, contraste, lumin
             }
             break;
         case 'footer':
-            elemento = paginaPreview.querySelector('.preview-footer');
+            elemento = paginaPreview.querySelector('.pie-pagina-previo');
             if (elemento) {
                 elemento.style.background = gradiente;
                 elemento.style.filter = `contrast(${contraste/100}) brightness(${luminosidad/100}) saturate(${intensidad/100})`;

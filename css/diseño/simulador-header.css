@@ -4,18 +4,23 @@
     min-height: auto;
     text-align: center;
     margin-top: -20px;
-    padding: 30px;
+    padding: 30px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
 }
 
 .header-tittle{
     color: rgb(206, 7, 93);
     position: relative;
     top: 15px;
-    left: 10px;
-    user-select: none; 
+    left: 0;
+    user-select: none;
     display: flex;
     align-items: center;
     gap: 15px;
+    justify-content: center;
 }
 
 .header-tittle:hover {
@@ -30,12 +35,6 @@
     top: 10px;
 }
 
-.header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
 .btn-volver {
     background: linear-gradient(45deg, #f093fb 0%, #f5576c 100%);
     color: white;
@@ -47,6 +46,7 @@
     cursor: pointer;
     box-shadow: 0 4px 15px rgba(240, 147, 251, 0.4);
     transition: transform 0.2s;
+    white-space: nowrap;
 }
 
 .btn-volver:hover {

@@ -1,12 +1,12 @@
-/* Simulador page styles */
+/* Estilos del simulador */
 @import 'base/simulador-reset.css';
 @import 'base/simulador-typography.css';
-@import 'layout/simulador-body.css';
-@import 'layout/simulador-header.css';
-@import 'layout/simulador-navbar.css';
-@import 'layout/simulador-footer.css';
-@import 'components/simulador-containers.css';
-@import 'components/simulador-modal.css';
-@import 'components/simulador-controls.css';
-@import 'components/simulador-buttons.css';
-@import 'responsive/simulador-responsive.css';
+@import 'diseño/simulador-body.css';
+@import 'diseño/simulador-header.css';
+@import 'diseño/simulador-navbar.css';
+@import 'diseño/simulador-footer.css';
+@import 'componentes/simulador-containers.css';
+@import 'componentes/simulador-modal.css';
+@import 'componentes/simulador-controls.css';
+@import 'componentes/simulador-buttons.css';
+@import 'responsivo/simulador-responsive.css';

@@ -1,0 +1,233 @@
+/* Media queries para diseño responsivo */
+
+/* Tablet y móviles grandes */
+@media (max-width: 768px) {
+    .header-container {
+        padding: 15px;
+    }
+    
+    .header-tittle {
+        font-size: 1.3rem;
+    }
+    
+    .header-tittle img {
+        width: 45px;
+        height: 45px;
+    }
+    
+    .navbar {
+        padding: 10px 15px;
+        margin: 15px 10px;
+        width: calc(100% - 20px);
+    }
+    
+    .navbar-content {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .navbar-controls {
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+    }
+    
+    .control-group {
+        width: 100%;
+    }
+    
+    .control-group select {
+        width: 100%;
+        box-sizing: border-box;
+    }
+    
+    .navbar-buttons {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .navbar-buttons button {
+        flex: 1;
+        min-width: 120px;
+    }
+    
+    .color-container {
+        padding: 15px;
+    }
+    
+    .resultados-container {
+        padding: 20px;
+        margin: 15px auto;
+    }
+    
+    .resultados-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 15px;
+        padding: 15px;
+    }
+    
+    .ghost-container {
+        padding: 10px 0;
+    }
+    
+    #red {
+        width: 100px;
+        height: 100px;
+        grid-template-columns: repeat(14, 1fr);
+        grid-template-rows: repeat(14, 1fr);
+    }
+    
+    #eye, #eye1 {
+        width: 30px;
+        height: 35px;
+        top: 15px;
+        left: 5px;
+    }
+    
+    #eye1 {
+        right: 25px;
+        left: auto;
+    }
+    
+    #pupil, #pupil1 {
+        width: 15px;
+        height: 15px;
+        top: 30px;
+        left: 10px;
+    }
+    
+    #pupil1 {
+        right: 40px;
+        left: auto;
+    }
+}
+
+/* Móviles pequeños */
+@media (max-width: 480px) {
+    .header-container {
+        padding: 10px;
+    }
+    
+    .header-tittle {
+        font-size: 1.1rem;
+    }
+    
+    .header-tittle img {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .navbar {
+        padding: 8px 10px;
+        margin: 10px 5px;
+        width: calc(100% - 10px);
+    }
+    
+    .navbar-content {
+        gap: 10px;
+    }
+    
+    .navbar-controls {
+        gap: 8px;
+    }
+    
+    .control-group label {
+        font-size: 0.75rem;
+    }
+    
+    .control-group select {
+        padding: 6px 10px;
+        font-size: 0.85rem;
+    }
+    
+    .navbar-buttons button {
+        padding: 8px 12px;
+        font-size: 0.8rem;
+        min-width: 100px;
+    }
+    
+    .color-container {
+        padding: 10px;
+    }
+    
+    .resultados-container {
+        padding: 15px;
+        margin: 10px auto;
+    }
+    
+    .resultados-container h2 {
+        font-size: 1.2rem;
+    }
+    
+    .resultados-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        padding: 10px;
+    }
+    
+    .resultado-card {
+        min-height: 120px;
+    }
+    
+    .resultado-info {
+        padding: 10px;
+    }
+    
+    .resultado-info p {
+        font-size: 0.85rem;
+    }
+    
+    .resultado-card button {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+    }
+    
+    #red {
+        width: 80px;
+        height: 80px;
+    }
+    
+    #eye, #eye1 {
+        width: 25px;
+        height: 30px;
+        top: 12px;
+        left: 3px;
+    }
+    
+    #eye1 {
+        right: 20px;
+        left: auto;
+    }
+    
+    #pupil, #pupil1 {
+        width: 12px;
+        height: 12px;
+        top: 25px;
+        left: 8px;
+    }
+    
+    #pupil1 {
+        right: 32px;
+        left: auto;
+    }
+}
+
+/* Pantallas muy grandes */
+@media (min-width: 1400px) {
+    .navbar {
+        max-width: 1400px;
+    }
+    
+    .color-container {
+        max-width: 1400px;
+    }
+    
+    .resultados-container {
+        max-width: 1400px;
+    }
+    
+    .resultados-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
