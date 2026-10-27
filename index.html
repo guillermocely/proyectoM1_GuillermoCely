@@ -2,33 +2,406 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Paleta de Colores - Bienvenida</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Generador de paletas de colores, armonías y simulador de estilos para páginas web.">
+    <title>Paleta de Colores</title>
     <link rel="icon" type="image/png" href="imagen/favicon.png">
-    <link rel="stylesheet" href="css/landing-styles.css">
+    <link rel="stylesheet" href="css/app.css">
 </head>
 <body>
-    <div class="container">
-        <img src="imagen/paleta-color.png" alt="Paleta de Colores" class="logo">
-        <h1>Paleta de Colores</h1>
-        <p>Descubre y crea combinaciones de colores perfectas para tus proyectos. Genera paletas armoniosas con un solo clic.</p>
-        
-        <div class="features">
-            <div class="feature">
-                <div class="feature-icon">🎨</div>
-                <div class="feature-text">Múltiples Formatos</div>
-            </div>
-            <div class="feature">
-                <div class="feature-icon">✨</div>
-                <div class="feature-text">Armonías</div>
-            </div>
-            <div class="feature">
-                <div class="feature-icon">❤️</div>
-                <div class="feature-text">Favoritos</div>
+    <a class="skip-link" href="#app">Saltar al contenido</a>
+
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="brand" href="#/inicio" aria-label="Paleta de Colores, ir al inicio">
+                <img src="imagen/paleta-color.png" alt="" width="48" height="48">
+                <span class="brand-text">Paleta de Colores</span>
+            </a>
+
+            <button class="menu-toggle" id="menuToggle" type="button" aria-expanded="false" aria-controls="mainNav" aria-label="Abrir menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="main-nav" id="mainNav" aria-label="Navegación principal">
+                <a href="#/inicio" data-nav="inicio">Inicio</a>
+                <a href="#/espacio" data-nav="espacio">Área de trabajo</a>
+                <a href="#/acerca" data-nav="acerca">Acerca de</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="app-main" id="app" tabindex="-1"></main>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 Paleta de Colores. Proyecto M1.</p>
+        <p class="footer-note">HTML, CSS y JavaScript vanilla. Tus favoritos se guardan en este navegador.</p>
+    </footer>
+
+    <div class="ghost-mascot">
+        <div class="ghost-bubble" id="feedback" role="status" aria-live="polite"></div>
+        <div id="ghost" aria-hidden="true">
+            <div id="ghost-scale">
+                <div id="red">
+                    <div id="pupil"></div>
+                    <div id="pupil1"></div>
+                    <div id="eye"></div>
+                    <div id="eye1"></div>
+                    <div id="top0"></div>
+                    <div id="top1"></div>
+                    <div id="top2"></div>
+                    <div id="top3"></div>
+                    <div id="top4"></div>
+                    <div id="st0"></div>
+                    <div id="st1"></div>
+                    <div id="st2"></div>
+                    <div id="st3"></div>
+                    <div id="st4"></div>
+                    <div id="st5"></div>
+                    <div id="an1"></div>
+                    <div id="an2"></div>
+                    <div id="an3"></div>
+                    <div id="an4"></div>
+                    <div id="an5"></div>
+                    <div id="an6"></div>
+                    <div id="an7"></div>
+                    <div id="an8"></div>
+                    <div id="an9"></div>
+                    <div id="an10"></div>
+                    <div id="an11"></div>
+                    <div id="an12"></div>
+                    <div id="an13"></div>
+                    <div id="an14"></div>
+                    <div id="an15"></div>
+                    <div id="an16"></div>
+                    <div id="an17"></div>
+                    <div id="an18"></div>
+                </div>
+                <div id="shadow"></div>
             </div>
         </div>
-
-        <a href="paleta.html" class="btn-enter">Comenzar</a>
     </div>
+
+    <template id="tpl-inicio">
+        <section class="view view-inicio">
+            <div class="hero">
+                <div class="hero-copy">
+                    <p class="eyebrow">Diseño de color para la web</p>
+                    <h1>Crea paletas que se sienten bien y funcionan mejor.</h1>
+                    <p class="hero-lead">
+                        Genera combinaciones armónicas, revisa sus valores HEX, HSL y RGB,
+                        guarda tus favoritos y pruébalos en una página de ejemplo.
+                    </p>
+                    <div class="hero-actions">
+                        <a class="btn btn-primary" href="#/espacio">Comenzar a mezclar</a>
+                        <a class="btn btn-ghost" href="#/acerca">Cómo se hizo</a>
+                    </div>
+                    <ul class="hero-stats" aria-label="Características principales">
+                        <li><strong>8</strong><span>armonías</span></li>
+                        <li><strong>3</strong><span>formatos</span></li>
+                        <li><strong>100%</strong><span>local</span></li>
+                    </ul>
+                </div>
+
+                <div class="hero-panel" aria-hidden="true">
+                    <div class="swatch-stack">
+                        <span style="--swatch:#7c5cff"></span>
+                        <span style="--swatch:#23d5ab"></span>
+                        <span style="--swatch:#ff4d8d"></span>
+                        <span style="--swatch:#ffc857"></span>
+                        <span style="--swatch:#3a86ff"></span>
+                        <span style="--swatch:#f6f7ff"></span>
+                    </div>
+                    <div class="hero-card">
+                        <span class="mini-label">Vista rápida</span>
+                        <div class="mini-window">
+                            <span class="mini-nav"></span>
+                            <span class="mini-hero"></span>
+                            <span class="mini-line"></span>
+                            <span class="mini-line short"></span>
+                            <span class="mini-button"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="feature-grid">
+                <article class="feature-card">
+                    <span class="feature-badge">01</span>
+                    <h2>Armonías coherentes</h2>
+                    <p>Los matices se mantienen dentro del rango de cada armonía para que la paleta no se disperse por la rueda de color.</p>
+                </article>
+                <article class="feature-card">
+                    <span class="feature-badge">02</span>
+                    <h2>Formatos listos</h2>
+                    <p>Cada color muestra HEX, HSL y RGB. Copia el valor que necesites con un clic.</p>
+                </article>
+                <article class="feature-card">
+                    <span class="feature-badge">03</span>
+                    <h2>Favoritos</h2>
+                    <p>Guarda los colores que te gusten y recupéralos en el simulador sin salir de la aplicación.</p>
+                </article>
+                <article class="feature-card">
+                    <span class="feature-badge">04</span>
+                    <h2>Simulador</h2>
+                    <p>Aplica colores, gradientes y filtros a una página de ejemplo y obtén el CSS generado.</p>
+                </article>
+            </div>
+        </section>
+    </template>
+
+    <template id="tpl-espacio">
+        <section class="view view-espacio">
+            <header class="view-header">
+                <p class="eyebrow">Espacio creativo</p>
+                <h1>Área de trabajo</h1>
+                <p>Mezcla colores, guarda tus favoritos y compruébalos en el simulador.</p>
+            </header>
+
+            <div class="tabs" role="tablist" aria-label="Herramientas del área de trabajo">
+                <button class="tab is-active" id="tabPaleta" type="button" role="tab" aria-selected="true" aria-controls="panelPaleta" data-tab="paleta">Paleta</button>
+                <button class="tab" id="tabSimulador" type="button" role="tab" aria-selected="false" aria-controls="panelSimulador" data-tab="simulador">Simulador</button>
+            </div>
+
+            <section class="tab-panel is-active" id="panelPaleta" role="tabpanel" aria-labelledby="tabPaleta" data-panel="paleta">
+                <div class="panel palette-panel">
+                    <div class="palette-controls">
+                        <div class="field">
+                            <label for="selectorTamaño">Tamaño</label>
+                            <select id="selectorTamaño">
+                                <option value="6">6 colores</option>
+                                <option value="8">8 colores</option>
+                                <option value="9">9 colores</option>
+                            </select>
+                        </div>
+                        <div class="field">
+                            <label for="selectorFormato">Formato</label>
+                            <select id="selectorFormato">
+                                <option value="hex">HEX</option>
+                                <option value="hsl">HSL</option>
+                                <option value="rgb">RGB</option>
+                            </select>
+                        </div>
+                        <div class="field">
+                            <label for="selectorArmonia">Armonía</label>
+                            <select id="selectorArmonia">
+                                <option value="aleatorio">Aleatorio</option>
+                                <option value="complementario">Complementario</option>
+                                <option value="complementario-dividido">Complementario dividido</option>
+                                <option value="analogo">Análogo</option>
+                                <option value="triadico">Triádico</option>
+                                <option value="tetradico">Tetrádico</option>
+                                <option value="cuadrado">Cuadrado</option>
+                                <option value="monocromatico">Monocromático</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <p class="hint" id="harmonyHint">Matiz base aleatorio con una ventana limitada para que la paleta no se disperse.</p>
+
+                    <div class="palette-actions">
+                        <button class="btn btn-primary" id="botonGenerar" type="button">Generar paleta</button>
+                        <button class="btn btn-secondary" id="botonGuardar" type="button">Guardar seleccionados</button>
+                        <button class="btn btn-ghost" id="botonVerFavoritos" type="button">Favoritos</button>
+                    </div>
+
+                    <div class="results-head">
+                        <h2 id="paletteTitle">Colores generados</h2>
+                        <span class="badge" id="paletteCount">6 colores</span>
+                    </div>
+
+                    <div class="palette-grid" id="gridColores" aria-label="Paleta de colores generada"></div>
+                </div>
+            </section>
+
+            <section class="tab-panel" id="panelSimulador" role="tabpanel" aria-labelledby="tabSimulador" data-panel="simulador" hidden>
+                <div class="panel simulator-toolbar">
+                    <div class="simulator-controls">
+                        <div class="field">
+                            <label for="tipoGeneracion">Tipo</label>
+                            <select id="tipoGeneracion">
+                                <option value="solid">Color sólido</option>
+                                <option value="gradiente">Gradiente</option>
+                                <option value="combinado">Combinado</option>
+                            </select>
+                        </div>
+                        <div class="field" id="grupoGradiente" hidden>
+                            <label for="tipoGradiente">Dirección</label>
+                            <select id="tipoGradiente">
+                                <option value="to right">Horizontal</option>
+                                <option value="to bottom">Vertical</option>
+                                <option value="to bottom right">Diagonal</option>
+                                <option value="radial">Radial</option>
+                            </select>
+                        </div>
+                        <div class="field">
+                            <label for="seccionSeleccion">Sección</label>
+                            <select id="seccionSeleccion">
+                                <option value="navbar">Navbar</option>
+                                <option value="aside">Aside</option>
+                                <option value="content">Contenido</option>
+                                <option value="footer">Footer</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="simulator-actions">
+                        <button class="btn btn-primary" id="btnAplicarColor" type="button">Aplicar color</button>
+                        <button class="btn btn-secondary" id="btnVerCodigo" type="button">Ver código CSS</button>
+                    </div>
+                </div>
+
+                <div class="simulator-grid">
+                    <div class="panel">
+                        <h2>Colores favoritos</h2>
+                        <p class="hint">Selecciona uno o varios colores guardados desde la pestaña Paleta.</p>
+                        <div class="favoritos-grid" id="favoritosGrid"></div>
+                    </div>
+
+                    <div class="panel">
+                        <h2>Área de trabajo</h2>
+                        <div class="canvas" id="canvas">
+                            <p class="placeholder">Selecciona colores y genera CSS</p>
+                        </div>
+                        <div class="color-controls">
+                            <div class="control-item">
+                                <label for="contraste">Contraste: <span id="contrasteValue">100%</span></label>
+                                <input type="range" id="contraste" min="0" max="200" value="100">
+                            </div>
+                            <div class="control-item">
+                                <label for="luminosidad">Luminosidad: <span id="luminosidadValue">100%</span></label>
+                                <input type="range" id="luminosidad" min="0" max="200" value="100">
+                            </div>
+                            <div class="control-item">
+                                <label for="intensidad">Intensidad: <span id="intensidadValue">100%</span></label>
+                                <input type="range" id="intensidad" min="0" max="200" value="100">
+                            </div>
+                            <div class="control-actions">
+                                <button class="btn btn-primary" id="btnAplicarModificaciones" type="button">Aplicar modificaciones</button>
+                                <button class="btn btn-ghost" id="btnReiniciar" type="button">Reiniciar filtros</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel preview-panel">
+                    <h2>Vista previa de página</h2>
+                    <div class="pagina-preview" id="paginaPreview">
+                        <nav class="barra-navegacion-previa">
+                            <h1>Mi Sitio Web</h1>
+                            <div class="enlaces-navegacion-previos">
+                                <a href="#/inicio">Inicio</a>
+                                <a href="#/espacio">Servicios</a>
+                                <a href="#/acerca">Contacto</a>
+                            </div>
+                        </nav>
+                        <div class="principal-previo">
+                            <aside class="barra-lateral-previa">
+                                <h3>Sidebar</h3>
+                                <ul>
+                                    <li><a href="#/inicio">Enlace 1</a></li>
+                                    <li><a href="#/espacio">Enlace 2</a></li>
+                                    <li><a href="#/acerca">Enlace 3</a></li>
+                                </ul>
+                            </aside>
+                            <div class="contenido-previo">
+                                <h2>Bienvenido a mi página</h2>
+                                <p>Este es un ejemplo de cómo se vería tu página con los colores seleccionados distribuidos en diferentes secciones.</p>
+                            </div>
+                        </div>
+                        <footer class="pie-pagina-previo">
+                            <p>&copy; 2026 Mi Sitio Web. Todos los derechos reservados.</p>
+                        </footer>
+                    </div>
+                </div>
+            </section>
+
+            <div class="modal" id="modalCSS" role="dialog" aria-modal="true" aria-labelledby="modalCSSLabel" aria-hidden="true">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3 id="modalCSSLabel">Código CSS</h3>
+                        <button class="modal-close" id="modalClose" type="button" aria-label="Cerrar">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <pre><code id="codigoCSS"></code></pre>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-primary" id="btnCopiarCSS" type="button">Copiar CSS</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+
+    <template id="tpl-acerca">
+        <section class="view view-acerca">
+            <header class="view-header">
+                <p class="eyebrow">Detrás de la plataforma</p>
+                <h1>Acerca de</h1>
+                <p>Cómo se construyó esta herramienta para crear y probar paletas de colores.</p>
+            </header>
+
+            <div class="about-grid">
+                <article class="panel about-card">
+                    <span class="feature-badge">01</span>
+                    <h2>Qué hace la plataforma</h2>
+                    <p>Permite generar paletas con distintas armonías, revisar cada color en HEX, HSL y RGB, guardar favoritos y simular cómo se verían en una página web.</p>
+                    <p>Todo funciona en el navegador y los favoritos se conservan en <code>localStorage</code>.</p>
+                </article>
+
+                <article class="panel about-card">
+                    <span class="feature-badge">02</span>
+                    <h2>Cómo se construyó</h2>
+                    <ul class="tech-list">
+                        <li><strong>HTML5</strong> semántico y accesible.</li>
+                        <li><strong>CSS3</strong> modular, mobile-first y con variables de diseño.</li>
+                        <li><strong>JavaScript vanilla</strong> organizado en módulos.</li>
+                        <li><strong>LocalStorage</strong> para los colores favoritos.</li>
+                    </ul>
+                </article>
+
+                <article class="panel about-card">
+                    <span class="feature-badge">03</span>
+                    <h2>Armonías de color</h2>
+                    <p>El generador parte de un matiz base y aplica desplazamientos controlados en la rueda de color:</p>
+                    <ul class="tech-list">
+                        <li>Complementario: 0° y 180°.</li>
+                        <li>Complementario dividido: 0°, 150° y 210°.</li>
+                        <li>Análogo: ventana de 60° alrededor del color base.</li>
+                        <li>Triádico: 0°, 120° y 240°.</li>
+                        <li>Tetrádico: 0°, 60°, 180° y 240°.</li>
+                        <li>Cuadrado: 0°, 90°, 180° y 270°.</li>
+                        <li>Monocromático: un solo matiz con variaciones de luz.</li>
+                    </ul>
+                </article>
+
+                <article class="panel about-card">
+                    <span class="feature-badge">04</span>
+                    <h2>Arquitectura SPA</h2>
+                    <p>La aplicación usa un único <code>index.html</code> y un enrutador por hash. Las vistas Inicio, Área de trabajo y Acerca de se cargan sin recargar la página.</p>
+                    <p>El simulador reutiliza los colores favoritos y genera el CSS listo para copiar.</p>
+                </article>
+            </div>
+
+            <div class="panel about-note">
+                <h2>Cómo usar la plataforma</h2>
+                <ol class="steps-list">
+                    <li>Entra en Área de trabajo y elige tamaño, formato y armonía.</li>
+                    <li>Genera la paleta y copia los valores que necesites.</li>
+                    <li>Marca tus colores favoritos y guárdalos.</li>
+                    <li>Abre la pestaña Simulador, selecciona colores y aplica estilos.</li>
+                    <li>Revisa el CSS generado y cópialo para tu proyecto.</li>
+                </ol>
+                <a class="btn btn-primary" href="#/espacio">Ir al área de trabajo</a>
+            </div>
+        </section>
+    </template>
+
+    <script src="js/color.js" defer></script>
+    <script src="js/store.js" defer></script>
+    <script src="js/ui.js" defer></script>
+    <script src="js/palette.js" defer></script>
+    <script src="js/simulator.js" defer></script>
+    <script src="js/router.js" defer></script>
 </body>
 </html>

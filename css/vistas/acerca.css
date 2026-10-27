@@ -1,0 +1,95 @@
+.about-grid {
+    display: grid;
+    gap: 0.9rem;
+}
+
+.about-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.about-card p {
+    font-size: 0.9rem;
+    line-height: 1.65;
+}
+
+.about-card .feature-badge {
+    margin-bottom: 0.2rem;
+}
+
+.tech-list,
+.steps-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+    margin-top: 0.2rem;
+    color: var(--muted);
+    font-size: 0.88rem;
+}
+
+.tech-list li {
+    position: relative;
+    padding-left: 1rem;
+}
+
+.tech-list li::before {
+    content: "";
+    position: absolute;
+    top: 0.62em;
+    left: 0;
+    width: 0.38rem;
+    height: 0.38rem;
+    border-radius: 50%;
+    background: var(--secondary);
+}
+
+.about-note {
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+    margin-top: 1rem;
+}
+
+.steps-list {
+    counter-reset: step;
+    list-style: none;
+}
+
+.steps-list li {
+    position: relative;
+    padding-left: 2rem;
+}
+
+.steps-list li::before {
+    counter-increment: step;
+    content: counter(step);
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline-flex;
+    width: 1.4rem;
+    height: 1.4rem;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(124, 92, 255, 0.18);
+    color: #d9d1ff;
+    font-family: var(--font-code);
+    font-size: 0.68rem;
+    font-weight: 800;
+}
+
+.about-note .btn {
+    align-self: flex-start;
+}
+
+@media (min-width: 700px) {
+    .about-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .about-note {
+        padding: 1.5rem;
+    }
+}
