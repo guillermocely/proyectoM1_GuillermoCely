@@ -73,8 +73,8 @@
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    background: rgba(124, 92, 255, 0.18);
-    color: #d9d1ff;
+    background: var(--feature-badge-bg);
+    color: var(--feature-badge-text);
     font-family: var(--font-code);
     font-size: 0.68rem;
     font-weight: 800;

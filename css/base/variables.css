@@ -1,4 +1,5 @@
 :root {
+    color-scheme: dark;
     --bg-0: #080b16;
     --bg-1: #0e1426;
     --bg-2: #151d36;
@@ -9,13 +10,54 @@
     --border-strong: rgba(255, 255, 255, 0.22);
     --text: #f4f6ff;
     --muted: #a9b3cf;
+    --muted-soft: rgba(169, 179, 207, 0.72);
     --primary: #7c5cff;
     --primary-strong: #9b7bff;
     --secondary: #23d5ab;
+    --secondary-text: #b9ffec;
+    --secondary-bg: rgba(35, 213, 171, 0.16);
+    --secondary-bg-hover: rgba(35, 213, 171, 0.24);
+    --secondary-border: rgba(35, 213, 171, 0.42);
     --accent: #ff4d8d;
     --warning: #ffc857;
     --danger: #ff5d6c;
+    --danger-bg: rgba(255, 93, 108, 0.16);
+    --danger-border: rgba(255, 93, 108, 0.4);
+    --danger-text: #ffc2c7;
     --ghost-color: #ff4d8d;
+    --page-bg:
+        radial-gradient(circle at 12% 8%, rgba(124, 92, 255, 0.22), transparent 34rem),
+        radial-gradient(circle at 88% 22%, rgba(35, 213, 171, 0.12), transparent 30rem),
+        radial-gradient(circle at 50% 100%, rgba(255, 77, 141, 0.16), transparent 34rem),
+        linear-gradient(155deg, var(--bg-1) 0%, var(--bg-0) 46%, #120b24 100%);
+    --header-bg: rgba(8, 11, 22, 0.76);
+    --nav-bg: rgba(8, 11, 22, 0.98);
+    --footer-bg: rgba(8, 11, 22, 0.35);
+    --panel-bg: linear-gradient(180deg, rgba(255, 255, 255, 0.085), rgba(255, 255, 255, 0.045));
+    --hero-panel-bg: linear-gradient(150deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.03));
+    --hero-card-bg: rgba(8, 11, 22, 0.56);
+    --feature-card-bg: linear-gradient(180deg, rgba(255, 255, 255, 0.075), rgba(255, 255, 255, 0.035));
+    --hero-title-start: #ffffff;
+    --hero-title-mid: #d9d1ff;
+    --hero-title-end: #ffc2dd;
+    --input-bg: rgba(8, 11, 22, 0.72);
+    --input-bg-hover: rgba(8, 11, 22, 0.9);
+    --inset-bg: rgba(0, 0, 0, 0.18);
+    --modal-bg: #11172a;
+    --modal-backdrop: rgba(4, 6, 14, 0.76);
+    --code-bg: #070a13;
+    --code-text: #8bffb0;
+    --nav-active-bg: rgba(124, 92, 255, 0.17);
+    --nav-active-border: rgba(124, 92, 255, 0.4);
+    --nav-active-text: #d9d1ff;
+    --feature-badge-bg: rgba(124, 92, 255, 0.14);
+    --feature-badge-border: rgba(124, 92, 255, 0.45);
+    --feature-badge-text: #d9d1ff;
+    --tab-bg: rgba(255, 255, 255, 0.04);
+    --favorite-border: rgba(255, 255, 255, 0.18);
+    --canvas-bg: rgba(255, 255, 255, 0.07);
+    --theme-btn-bg: rgba(255, 255, 255, 0.04);
+    --theme-btn-hover: rgba(255, 255, 255, 0.09);
     --radius-sm: 10px;
     --radius: 16px;
     --radius-lg: 26px;
@@ -26,6 +68,70 @@
     --font-body: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
     --font-code: "Cascadia Code", "Consolas", "Courier New", monospace;
     --transition: 220ms ease;
+}
+
+html[data-theme="light"] {
+    color-scheme: light;
+    --bg-0: #f7f8ff;
+    --bg-1: #eef1ff;
+    --bg-2: #e7ebfa;
+    --surface: rgba(22, 28, 52, 0.05);
+    --surface-strong: rgba(22, 28, 52, 0.09);
+    --surface-solid: #ffffff;
+    --border: rgba(22, 28, 52, 0.14);
+    --border-strong: rgba(22, 28, 52, 0.24);
+    --text: #151a2e;
+    --muted: #5b6382;
+    --muted-soft: rgba(70, 80, 110, 0.8);
+    --primary: #5b3df0;
+    --primary-strong: #4a2ad6;
+    --secondary: #0a9f83;
+    --secondary-text: #056b58;
+    --secondary-bg: rgba(10, 159, 131, 0.12);
+    --secondary-bg-hover: rgba(10, 159, 131, 0.2);
+    --secondary-border: rgba(10, 159, 131, 0.4);
+    --accent: #c92462;
+    --warning: #8a5a00;
+    --danger: #c0394b;
+    --danger-bg: rgba(192, 57, 75, 0.1);
+    --danger-border: rgba(192, 57, 75, 0.35);
+    --danger-text: #9b1c2c;
+    --ghost-color: #d92e6e;
+    --page-bg:
+        radial-gradient(circle at 12% 8%, rgba(91, 61, 240, 0.14), transparent 34rem),
+        radial-gradient(circle at 88% 22%, rgba(10, 159, 131, 0.1), transparent 30rem),
+        radial-gradient(circle at 50% 100%, rgba(217, 46, 110, 0.08), transparent 34rem),
+        linear-gradient(155deg, var(--bg-1) 0%, var(--bg-0) 46%, #e9ecff 100%);
+    --header-bg: rgba(247, 248, 255, 0.82);
+    --nav-bg: rgba(247, 248, 255, 0.99);
+    --footer-bg: rgba(238, 241, 250, 0.6);
+    --panel-bg: linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.72));
+    --hero-panel-bg: linear-gradient(150deg, rgba(255, 255, 255, 0.94), rgba(245, 247, 255, 0.72));
+    --hero-card-bg: rgba(255, 255, 255, 0.78);
+    --feature-card-bg: linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(255, 255, 255, 0.76));
+    --hero-title-start: #151a2e;
+    --hero-title-mid: #4a2ad6;
+    --hero-title-end: #d92e6e;
+    --input-bg: rgba(255, 255, 255, 0.82);
+    --input-bg-hover: #ffffff;
+    --inset-bg: rgba(22, 28, 52, 0.055);
+    --modal-bg: #ffffff;
+    --modal-backdrop: rgba(20, 28, 50, 0.42);
+    --code-bg: #f2f4fa;
+    --code-text: #0b6b3a;
+    --nav-active-bg: rgba(91, 61, 240, 0.12);
+    --nav-active-border: rgba(91, 61, 240, 0.35);
+    --nav-active-text: #3b1fb0;
+    --feature-badge-bg: rgba(91, 61, 240, 0.1);
+    --feature-badge-border: rgba(91, 61, 240, 0.35);
+    --feature-badge-text: #3b1fb0;
+    --tab-bg: rgba(22, 28, 52, 0.045);
+    --favorite-border: rgba(22, 28, 52, 0.18);
+    --canvas-bg: rgba(22, 28, 52, 0.05);
+    --theme-btn-bg: rgba(22, 28, 52, 0.04);
+    --theme-btn-hover: rgba(22, 28, 52, 0.09);
+    --shadow-sm: 0 8px 20px rgba(35, 45, 80, 0.08);
+    --shadow: 0 20px 55px rgba(35, 45, 80, 0.14);
 }
 
 @media (min-width: 768px) {

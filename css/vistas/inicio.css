@@ -7,7 +7,7 @@
 .hero-copy h1 {
     max-width: 15ch;
     margin-bottom: 1rem;
-    background: linear-gradient(120deg, #ffffff 12%, #d9d1ff 52%, #ffc2dd 100%);
+    background: linear-gradient(120deg, var(--hero-title-start) 12%, var(--hero-title-mid) 52%, var(--hero-title-end) 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -66,7 +66,7 @@
     padding: 1rem;
     border: 1px solid var(--border);
     border-radius: var(--radius-lg);
-    background: linear-gradient(150deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.03));
+    background: var(--hero-panel-bg);
     box-shadow: var(--shadow);
     overflow: hidden;
 }
@@ -107,7 +107,7 @@
     padding: 0.8rem;
     border: 1px solid var(--border);
     border-radius: var(--radius);
-    background: rgba(8, 11, 22, 0.56);
+    background: var(--hero-card-bg);
     backdrop-filter: blur(10px);
 }
 
@@ -126,6 +126,7 @@
     flex-direction: column;
     gap: 0.35rem;
     padding: 0.7rem;
+    border: 1px solid var(--border);
     border-radius: 10px;
     background: #f7f8ff;
 }
@@ -178,13 +179,13 @@
     padding: 1.1rem;
     border: 1px solid var(--border);
     border-radius: var(--radius);
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.075), rgba(255, 255, 255, 0.035));
+    background: var(--feature-card-bg);
     transition: transform var(--transition), border-color var(--transition), background-color var(--transition);
 }
 
 .feature-card:hover {
     transform: translateY(-2px);
-    border-color: rgba(124, 92, 255, 0.45);
+    border-color: var(--primary);
 }
 
 .feature-badge {
@@ -194,10 +195,10 @@
     align-items: center;
     justify-content: center;
     margin-bottom: 0.8rem;
-    border: 1px solid rgba(124, 92, 255, 0.45);
+    border: 1px solid var(--feature-badge-border);
     border-radius: 10px;
-    background: rgba(124, 92, 255, 0.14);
-    color: #d9d1ff;
+    background: var(--feature-badge-bg);
+    color: var(--feature-badge-text);
     font-family: var(--font-code);
     font-size: 0.72rem;
     font-weight: 800;

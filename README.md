@@ -35,6 +35,10 @@ El logo del encabezado siempre regresa a `#/inicio`. Las pestañas Paleta y Simu
 6. Ajusta contraste, luminosidad e intensidad.
 7. Pulsa **Ver código CSS** para copiar el resultado.
 
+### Tema claro y oscuro
+
+El botón del sol o la luna en el encabezado alterna entre tema claro y oscuro. La preferencia se guarda en `localStorage` y, mientras no elijas un tema manualmente, la aplicación respeta la preferencia `prefers-color-scheme` del sistema. El tema se aplica antes del primer render para evitar destellos de color.
+
 ## Armonías y coherencia cromática
 
 El generador parte de un matiz base y mantiene cada paleta dentro del rango visual de su armonía:
@@ -78,6 +82,7 @@ proyectoM1_guillermoCely/
 │   ├── color.js               # Conversiones HEX/HSL/RGB y contraste
 │   ├── store.js               # Favoritos en localStorage
 │   ├── ui.js                  # Mensajes y portapapeles
+│   ├── theme.js               # Tema claro/oscuro y persistencia
 │   ├── palette.js             # Generación y render de paletas
 │   ├── simulator.js           # Simulador y generación de CSS
 │   └── router.js              # Enrutador SPA y navegación
@@ -96,6 +101,7 @@ proyectoM1_guillermoCely/
 - Simulador con color sólido, gradiente y combinado.
 - Controles de contraste, luminosidad e intensidad.
 - Generación y copia de código CSS.
+- Tema claro y oscuro persistente, con detección del tema del sistema.
 - Mascota fantasma animada y adaptada a móvil.
 - Soporte para `prefers-reduced-motion` y navegación por teclado.
 

@@ -62,7 +62,7 @@ body {
 }
 
 .panel {
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.085), rgba(255, 255, 255, 0.045));
+    background: var(--panel-bg);
     border: 1px solid var(--border);
     border-radius: var(--radius);
     box-shadow: var(--shadow-sm);
@@ -111,29 +111,29 @@ body {
 }
 
 .btn-secondary {
-    background: rgba(35, 213, 171, 0.16);
-    border-color: rgba(35, 213, 171, 0.42);
-    color: #b9ffec;
+    background: var(--secondary-bg);
+    border-color: var(--secondary-border);
+    color: var(--secondary-text);
 }
 
 .btn-secondary:hover {
-    background: rgba(35, 213, 171, 0.24);
+    background: var(--secondary-bg-hover);
 }
 
 .btn-ghost {
-    background: rgba(255, 255, 255, 0.04);
+    background: var(--theme-btn-bg);
     border-color: var(--border-strong);
     color: var(--text);
 }
 
 .btn-ghost:hover {
-    background: rgba(255, 255, 255, 0.09);
+    background: var(--theme-btn-hover);
 }
 
 .btn-danger {
-    background: rgba(255, 93, 108, 0.16);
-    border-color: rgba(255, 93, 108, 0.4);
-    color: #ffc2c7;
+    background: var(--danger-bg);
+    border-color: var(--danger-border);
+    color: var(--danger-text);
 }
 
 .btn-sm {
@@ -165,7 +165,7 @@ input[type="number"] {
     padding: 0.6rem 0.75rem;
     border: 1px solid var(--border-strong);
     border-radius: var(--radius-sm);
-    background-color: rgba(8, 11, 22, 0.72);
+    background-color: var(--input-bg);
     color: var(--text);
     font-size: 0.92rem;
     cursor: pointer;
@@ -174,8 +174,8 @@ input[type="number"] {
 
 select:hover,
 select:focus {
-    border-color: rgba(124, 92, 255, 0.7);
-    background-color: rgba(8, 11, 22, 0.9);
+    border-color: var(--primary);
+    background-color: var(--input-bg-hover);
 }
 
 select option {
@@ -190,7 +190,7 @@ select option {
     padding: 0.25rem 0.6rem;
     border: 1px solid var(--border);
     border-radius: 999px;
-    background: rgba(255, 255, 255, 0.05);
+    background: var(--surface);
     color: var(--muted);
     font-size: 0.74rem;
     font-weight: 750;
@@ -209,7 +209,7 @@ select option {
 .site-footer {
     padding: 1.6rem 1rem 2rem;
     border-top: 1px solid var(--border);
-    background: rgba(8, 11, 22, 0.35);
+    background: var(--footer-bg);
     text-align: center;
 }
 
@@ -219,7 +219,7 @@ select option {
 
 .footer-note {
     margin-top: 0.25rem;
-    color: rgba(169, 179, 207, 0.72);
+    color: var(--muted-soft);
 }
 
 @media (min-width: 768px) {

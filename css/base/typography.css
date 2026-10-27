@@ -3,11 +3,7 @@ body {
     font-size: 1rem;
     line-height: 1.6;
     color: var(--text);
-    background:
-        radial-gradient(circle at 12% 8%, rgba(124, 92, 255, 0.22), transparent 34rem),
-        radial-gradient(circle at 88% 22%, rgba(35, 213, 171, 0.12), transparent 30rem),
-        radial-gradient(circle at 50% 100%, rgba(255, 77, 141, 0.16), transparent 34rem),
-        linear-gradient(155deg, var(--bg-1) 0%, var(--bg-0) 46%, #120b24 100%);
+    background: var(--page-bg);
     background-attachment: fixed;
 }
 
