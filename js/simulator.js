@@ -153,7 +153,7 @@
         }
 
         const contrast = Color.getContrastColor(baseHex);
-        element.querySelectorAll("h1, h2, h3, p, a, li, span").forEach(function (node) {
+        element.querySelectorAll("h1, h2, h3, h4, p, li, span:not(.pv-btn-solid), strong").forEach(function (node) {
             node.style.color = contrast;
         });
     }
@@ -209,7 +209,6 @@
             });
             currentBackground = null;
             lastSection = elements.seccion.value;
-            document.documentElement.style.setProperty("--ghost-color", selected[0]);
         } else {
             currentBackground = null;
             setCanvasBackground(null);
@@ -266,7 +265,6 @@
         lastSection = elements.seccion.value;
         setCanvasBackground(background);
         applyToSection();
-        document.documentElement.style.setProperty("--ghost-color", baseHex);
         UI.showMessage("Color aplicado a " + getSectionLabel(lastSection));
     }
 
@@ -277,18 +275,18 @@
 
         updateFilterLabels();
 
-        if (currentBackground) {
+        if (selected.length) {
             elements.canvas.style.filter = getFilterString();
-            applyToSection();
         }
+        applyToSection();
     }
 
     function resetFilters() {
         resetFilterValues();
-        if (currentBackground) {
+        if (selected.length) {
             elements.canvas.style.filter = getFilterString();
-            applyToSection();
         }
+        applyToSection();
         UI.showMessage("Filtros restablecidos");
     }
 
@@ -383,15 +381,6 @@
         });
         elements.resetButton.addEventListener("click", resetFilters);
         elements.favoritesGrid.addEventListener("click", handleFavoritesClick);
-
-        elements.preview.addEventListener("click", function (event) {
-            const link = event.target.closest("a");
-            if (!link || !elements.preview.contains(link)) {
-                return;
-            }
-            event.preventDefault();
-            UI.showMessage("Vista previa: los enlaces son decorativos");
-        });
 
         elements.contraste.addEventListener("input", updateFilters);
         elements.luminosidad.addEventListener("input", updateFilters);

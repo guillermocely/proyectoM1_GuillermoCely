@@ -228,15 +228,6 @@
         elements.hint.textContent = config.hint;
     }
 
-    function updateGhostColor() {
-        if (!currentPalette.length) {
-            return;
-        }
-
-        const index = Math.floor(currentPalette.length / 2);
-        document.documentElement.style.setProperty("--ghost-color", currentPalette[index].hex);
-    }
-
     function createPaletteCard(color, index, previousBackground, animate) {
         const card = document.createElement("article");
         const isSelected = selected.has(color.hex);
@@ -316,7 +307,6 @@
         elements.favoritosButton.classList.remove("is-active-view");
         renderCards(currentPalette, Boolean(animate));
         updateFormatHighlight();
-        updateGhostColor();
     }
 
     function renderFavorites() {
